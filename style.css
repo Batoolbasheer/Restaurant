@@ -36,10 +36,10 @@ nav a:hover{
 /* ......................... */
 /* ......................... */
 main{
-    padding: 50px;
+    padding: 10px;
     margin: auto;
     width: 100%;
-    height: 100vh;
+    height: 1000px;
     background: #FAF0D7;
 }
 
@@ -49,14 +49,14 @@ form{
     flex-direction: column;
     padding: 2vw 4vw;
     width: 90%;
-    max-width: 600px;
+    max-width: 300px;
     border-radius: 10px;
 }
 
 form input, select{
     border: 0;
-    margin: 10px;
-    padding: 20px;
+    margin: 5px;
+    padding: 5px;
     outline: none;
     background: white;
     font-size: 16px;
@@ -70,8 +70,8 @@ form button{
     border: 0;
     outline: none;
     cursor: pointer;
-    width: 150px;
-    margin: 20px auto 0;
+    width: 140px;
+    margin: 10px auto 0;
     border-radius: 30px;
 }
 label{
@@ -100,3 +100,37 @@ label{
     color: #FFD9C0;
 }
 /* ............................ */
+table{
+    position: relative;
+    z-index: 2;
+    left: 600px;
+    top: 50px;
+    transform: translate(-50%,-50%);
+    width: 60%; 
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+   
+   }
+   td , th{
+    padding: 15px 55px;
+    text-align: center;
+    background-color: #FFDEDE;
+    
+   
+   }
+   th{
+    background-color: #F4BFBF;
+    color: #187498;
+    text-transform: uppercase;
+   
+   }
+   tr{
+    width: 100%;
+    background-color: #8CC0DE;
+    
+   }
+   tr:nth-child(even){
+    background-color: #F4BFBF;
+   }
