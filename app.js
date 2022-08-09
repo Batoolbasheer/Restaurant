@@ -1,72 +1,53 @@
 'use strict';
-const body = document.getElementsByTagName('body');
+let submit = document.getElementById("submit");
+let form = document.getElementById("form");
+let table = document.getElementById("table");
 
-const allTypes = [];
+
+var foodID = 0;
 function Food(foodID,foodName,type,price){
-    this.foodID=foodID;
-    this.foodName=foodName;
-    this.type=type;
-    this.price=price;
-    allTypes.push(this);
+    this.foodID= foodID;
+    this.foodName= foodName;
+    this.type= type;
+    this.price= price;
+    this.render();
 } 
 
 
-// Food.prototype.printMenu = function () {
+Food.prototype.render = function (){
+    let newRow= document.createElement("tr");
+    table.appendChild(newRow)
 
-//     const divEl = document.createElement('div');
-//     body[0].appendChild(divEl);
+    let newID= document.createElement("td");
+    newID.textContent= this.foodID;
+    newRow.appendChild(newID)
 
-//     //par
-//     const pEl = document.createElement('p');
-//     pEl.textContent = `Drink name : ${this.name} : ${this.price}`;
-//     divEl.appendChild(pEl);
+    let newName= document.createElement("td");
+    newName.textContent= this.foodName;
+    newRow.appendChild(newName)
 
-//     //img
-//     const imgEl = document.createElement('img');
-//     imgEl.src = this.image;
-//     imgEl.alt = this.name;
-//     divEl.appendChild(imgEl);
+    let newType= document.createElement("td");
+    newType.textContent= this.type;
+    newRow.appendChild(newType)
 
-//     const ulEl = document.createElement('ul');
-//     divEl.appendChild(ulEl);
-
-//     for (let i = 0; i < this.ingredients.length; i++) {
-//         let liEl = document.createElement('li');
-//         ulEl.appendChild(liEl);
-//         liEl.textContent = this.ingredients[i];
-//     }
-
-// }
-
-
-
-
-
-
-// let americano = new Drink("americano", [ "coffee", "ice", "sugar"], "./assets/americano.png", true, false, 2.50);
-// let espresso = new Drink("espresso", ["milk", "coffee", "ice"], "./assets/espresso.png", true, false, 2.50);
-// let latte = new Drink("latte", ["milk", "coffee", "ice", "sugar"], "./assets/latte.png", true, false, 2.50);
-// let mocha= new Drink("mocha", [ "coffee", "ice"], "./assets/mocha.png", true, false, 2.50);
-
-
-for (let i = 0; i < allTypes.length; i++) {
-    allTypes[i].printMenu();
+    let newPrice= document.createElement("td");
+    newPrice.textContent= this.price;
+    newRow.appendChild(newPrice)
 }
 
+Food.id;
+form.addEventListener('submit',handleSubmit);
+    function handleSubmit(event){
+        event.preventDefault()
+        let foodName= event.target.foodName.value;
+        let type= event.target.foodType.value;
+        let price= event.target.price.value;
+        let foodID= ID();
+        console.log(type)
+const newFood= new Food(foodID,foodName,type,price);
+    }
 
-
-// let form = document.getElementById("form");
-
-// form.addEventListener("submit", handleSubmit);
-// function handleSubmit(event) {
-//     event.preventDefault();
-//     let foodID = event.target.foodID.value;
-//     let foodName = event.target.foodName.value;
-//     let type =event.target.type.value; 
-//     let price = event.target.price.value;
-//     console.log(foodID,foodName,type,price);
-    
-//     const newFood = new Food(foodID,foodName,type,price);
-//     newFood.printMenu();
-//     console.log(allTypes)  
-// }
+function ID(){
+    foodID= Math.floor(1000+ Math.random()*9000);
+    return foodID;
+}
