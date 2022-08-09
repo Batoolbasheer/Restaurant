@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+    <!-- <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ...................... header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="/img/logo.png" alt="logo">BambooRestaurant</a>
+            </div>
+             
+            <ul class="menu">
+                <li><a href="/index.html">Home</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+<!-- ............................ form --> 
+    <main>
+        <form id="form">
+            <label for="foodName">Food Name</label>
+            <input type="text" id="foodName">
+
+            <label for="foodType">Food Type</label>
+            <select name="select" id="foodType">
+                <option value="select">select</option>
+            <option value="fruitVegetables">Fruit and vegetables</option>
+            <option value="food">Starchy food</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Protein">Protein</option>
+            <option value="Fat">Fat</option>
+            </select>
+
+            <label for="price">Price</label>
+            <input type="text" id="price">
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+<!-- ............................ footer -->
+    <footer>
+        <div class="footer">
+            <!-- <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a> -->
+            <p>&copy; copyRights 2022</p>
+        </div>
+    </footer>
+</body>
+<script src="/app.js"></script>
+</html>
