@@ -45,9 +45,20 @@ form.addEventListener('submit',handleSubmit);
         let foodID= ID();
         console.log(type)
 const newFood= new Food(foodID,foodName,type,price);
+
+
+newFood.render()
+console.log(Food)
+saveData(newFood)
     }
 
 function ID(){
     foodID= Math.floor(1000+ Math.random()*9000);
     return foodID;
 }
+
+function saveData(data){
+    let string0bj= JSON.stringify(data);
+    localStorage.setItem("Food", string0bj)
+}
+

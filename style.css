@@ -36,10 +36,10 @@ nav a:hover{
 /* ......................... */
 /* ......................... */
 main{
-    padding: 10px;
+    padding: 5px;
     margin: auto;
     width: 100%;
-    height: 1000px;
+    height: 700px;
     background: #FAF0D7;
 }
 
@@ -48,34 +48,35 @@ form{
     display: flex;
     flex-direction: column;
     padding: 2vw 4vw;
-    width: 90%;
-    max-width: 300px;
-    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
 }
 
 form input, select{
     border: 0;
-    margin: 5px;
-    padding: 5px;
+    margin: 15px;
+    padding: 10px;
     outline: none;
     background: white;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 form button{
-    padding: 15px;
+    padding: 5px;
     background: #FAF0D7;
     color: #187498;
     font-size: 18px;
     border: 0;
     outline: none;
     cursor: pointer;
-    width: 140px;
+    width: 170px;
     margin: 10px auto 0;
     border-radius: 30px;
 }
 label{
     color: #187498;
+    font-size: 30px;
 }
 
 /* .......................... */
